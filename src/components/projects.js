@@ -10,7 +10,6 @@ class Projects extends Component {
     let projectItems;
   
     if(this.props.projects){
-        console.log("Yes")
       projectItems = this.props.projects.map(project => {
           return( 
               <ProjectItem key={project.title} project={project} />
