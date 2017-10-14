@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import uuid from 'uuid';
 class AddProject extends Component {
   
   
@@ -19,6 +19,7 @@ class AddProject extends Component {
           alert('Title Is Required')
       } else {
           this.setState({newProject:{
+              id: uuid.v4(),
               title: this.refs.title.value,
               category: this.refs.category.value
           }}, function() {
@@ -48,6 +49,7 @@ class AddProject extends Component {
                     {categoryOptions}
                 </select>
             </div>
+            <br />
             <input type="submit" value="submit" />
         </form>
       </div>
