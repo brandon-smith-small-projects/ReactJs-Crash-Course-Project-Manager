@@ -6,9 +6,12 @@ class TodoItem extends Component {
   render() {
     
     return (
-      <li className="Todo">
-        <strong>{this.props.todo.title}</strong>
-      </li>
+      
+      <ul className="list-group">
+          <li className="Todo list-group-item">
+            <strong>{this.props.todo.title}</strong>
+          </li>
+      </ul>
     );
   }
 }

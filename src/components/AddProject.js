@@ -37,21 +37,20 @@ class AddProject extends Component {
       })
     return (
       <div >
-        <h3>Add Project</h3>
+        <h3 className="text-center">Add Project</h3>
         <form onSubmit={this.handleSubmit.bind(this)}>
-            <div>
+            <div className="form-group">
                 <label>Title</label>
-                <input type="text" ref="title" />
+                <input className="form-control" type="text" ref="title" />
                 <br />
             </div>
-            <div>
+            <div className="form-group">
                 <label>Category</label>
-                <select ref="category">
+                <select className="form-control" ref="category">
                     {categoryOptions}
                 </select>
             </div>
-            <br />
-            <input type="submit" value="submit" />
+            <input className="btn btn-dark btn-block" type="submit" value="submit" />
         </form>
       </div>
     );

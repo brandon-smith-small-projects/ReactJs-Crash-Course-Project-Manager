@@ -77,12 +77,27 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
-        <AddProject addProject={this.handleAddProject.bind(this)}/>
-        {console.log(this.state)}
-        <Projects onDelete={this.handleDeleteProject.bind(this)} projects={this.state.projects} />
-        <hr />
-        <Todos todos={this.state.todos}/>
+      <div className="container App">
+        <div className="row">
+          <div className="col-md-6 py-5">
+            <div className="card">
+              <div className="card-body">
+                <AddProject addProject={this.handleAddProject.bind(this)}/>
+                {console.log(this.state)}
+              </div>
+            </div>
+            </div>
+            <div className="col-md-6 py-5">
+              <div className="card">
+                <div className="card-body">
+                 <Projects onDelete={this.handleDeleteProject.bind(this)} projects={this.state.projects} />
+                </div>
+              </div>
+            </div>
+          </div>
+        <div className="col-md-12 pt-5">
+          <Todos todos={this.state.todos}/>
+        </div>
       </div>
     );
   }
