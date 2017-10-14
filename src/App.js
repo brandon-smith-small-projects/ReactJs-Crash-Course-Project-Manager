@@ -26,7 +26,11 @@ class App extends Component {
     this.setState({projects:projects});
   }
   
-  componentWillMount(){
+  getTodos(){
+    
+  }
+  
+  getProjects(){
     this.setState({projects: [
       {
         id:uuid.v4(),
@@ -45,6 +49,16 @@ class App extends Component {
       }
     ]});
   }
+  
+  componentWillMount(){
+    this.getProjects();
+    this.getTodos();
+  }
+  
+  componentDidMount(){
+    this.getTodos()
+  }
+  
   
   render() {
     return (
